@@ -1,0 +1,15 @@
+<ActionBar title="Alerts" icon="" class="action-bar">
+</ActionBar>
+
+<StackLayout>
+  <ListView height="100%" [items]="alerts$ | async" (itemTap)="alertSelected($event)" class="list-group">
+    <ng-template let-alert="item" let-odd="odd" let-even="even">
+      <StackLayout orientation="horizontal">
+        <Label [text]="alert.equipment" class="list-group-item"></Label>
+        <Label [text]="alert.anamoly" class="list-group-item"></Label>
+        <Label [text]="alert.predictedfailure" class="list-group-item"></Label>
+        <Label [text]="alert.site" class="list-group-item"></Label>
+      </StackLayout>
+    </ng-template>
+  </ListView>
+</StackLayout>

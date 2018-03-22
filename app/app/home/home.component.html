@@ -1,0 +1,28 @@
+<ActionBar class="action-bar" title="Your Company Name"></ActionBar>
+
+<FlexboxLayout class="page">
+    <StackLayout class="flexbox-item">
+        <Label class="t-30 title content" text="Welcome"></Label>
+        <Label class="t-20 content font-weight-bold" [text]="loggedUser" ></Label>
+    </StackLayout>
+    <StackLayout class="hr flexbox-item"></StackLayout>
+    
+    <WrapLayout class="flexbox-item menu">
+        <StackLayout data-name="orders" class="menu-item">
+            <Button text="&#xf015;" class="fa menu-icon" [nsRouterLink]="['/orders']"></Button>
+            <Label text="Orders" class="text-center m-t-16" [nsRouterLink]="['/orders']"></Label>
+        </StackLayout>
+        <StackLayout data-name="alerts" class="menu-item">
+            <Button text="&#xf1ea;" class="fa menu-icon" [nsRouterLink]="['/alerts']"></Button>
+            <Label text="Alerts" class="text-center m-t-16" [nsRouterLink]="['/alerts']"></Label>
+        </StackLayout>
+        <StackLayout data-name="equipement" class="menu-item">
+            <Button text="&#xf005;" class="fa menu-icon" [nsRouterLink]="['/equipment']"></Button>
+            <Label text="Equipment" class="text-center m-t-16" [nsRouterLink]="['/equipment']"></Label>
+        </StackLayout>
+        <StackLayout data-name="profile" class="menu-item">
+            <Button text="&#xf013;" class="fa menu-icon" [nsRouterLink]="['/profile']"></Button>
+            <Label text="Profile" class="text-center m-t-16" [nsRouterLink]="['/profile']"></Label>
+        </StackLayout>
+    </WrapLayout>
+</FlexboxLayout>

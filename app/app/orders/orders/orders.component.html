@@ -1,0 +1,13 @@
+<ActionBar title="Orders" icon="" class="action-bar">
+</ActionBar>
+
+<StackLayout>
+  <ListView height="100%" [items]="orders$ | async" (itemTap)="orderSelected($event)" class="list-group">
+    <ng-template let-order="item" let-odd="odd" let-even="even">
+      <StackLayout orientation="horizontal">
+        <Label [text]="order.workorderid" class="list-group-item"></Label>
+        <Label [text]="order.description" class="list-group-item"></Label>
+      </StackLayout>
+    </ng-template>
+  </ListView>
+</StackLayout>

@@ -1,0 +1,12 @@
+<ActionBar title="Equipment" class="action-bar">
+</ActionBar>
+
+<StackLayout>
+  <ListView height="100%" [items]="equipment" (itemTap)="equipmentSelected($event)" class="list-group">
+    <ng-template let-item="item" let-odd="odd" let-even="even">
+      <StackLayout orientation="horizontal">
+        <Label [text]="item.name" class="list-group-item"></Label>
+      </StackLayout>
+    </ng-template>
+  </ListView>
+</StackLayout>

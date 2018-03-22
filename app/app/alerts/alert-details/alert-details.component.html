@@ -1,0 +1,19 @@
+<ActionBar [title]="(alert$ | async)?.equipment" class="action-bar">
+  </ActionBar>
+  
+  <StackLayout>
+    <StackLayout *ngIf="(alert$ | async) as alert">
+      <!-- <Label [text]="alert | json" textWrap="true"></Label> -->
+
+      <Label [text]="'_id: ' + alert._id"></Label>
+      <Label [text]="'predictedfailure: ' + alert.predictedfailure" textWrap="true"></Label>
+      <Label [text]="'anamoly: ' + alert.anamoly"></Label>
+      <Label [text]="'equipment: ' + alert.equipment"></Label>
+      <Label [text]="'site: ' + alert.site"></Label>
+    </StackLayout>
+  
+    <Button text="Open Order" (tap)="openOrder()" class="btn btn-primary"></Button>
+    <Button text="Dismiss" (tap)="dismiss()" class="btn btn-primary"></Button>
+    
+  </StackLayout>
+  

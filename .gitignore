@@ -1,0 +1,11 @@
+node_modules/
+platforms/
+hooks/
+
+# Outputs
+app/**/*.js
+app/**/*.js.map
+
+# IDEs
+.vscode/
+.history

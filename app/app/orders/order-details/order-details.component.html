@@ -1,0 +1,17 @@
+<ActionBar [title]="'Order:' + (order$ | async)?.workorderid" class="action-bar">
+</ActionBar>
+
+<StackLayout>
+  <StackLayout *ngIf="(order$ | async) as order">
+    <Label [text]="'_id: ' + order._id"></Label>
+    <Label [text]="'photo: ' + order.photo" textWrap="true"></Label>
+    <Label [text]="'workorderid: ' + order.workorderid"></Label>
+    <Label [text]="'duedate: ' + order.duedate"></Label>
+    <Label [text]="'status: ' + order.status"></Label>
+    <Label [text]="'location: ' + order.location"></Label>
+    <Label [text]="'description: ' + order.description" textWrap="true"></Label>
+  </StackLayout>
+
+  <Button text="View Equipment" (tap)="viewEquipment()" class="btn btn-primary"></Button>
+  
+</StackLayout>
